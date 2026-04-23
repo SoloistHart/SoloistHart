@@ -1,18 +1,62 @@
 import fs from "node:fs";
 import process from "node:process";
 
-import { Octokit } from "@octokit/rest";
-
 const username = process.env.GITHUB_USERNAME?.trim() || "SoloistHart";
 const featuredTopic = process.env.FEATURED_TOPIC?.trim() || "featured";
 const readmePath = new URL("../README.md", import.meta.url);
 const token = process.env.GITHUB_TOKEN?.trim();
+const descriptionOverrides = {
+  "Portfolio-Hart": "Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system.",
+  SoloistHart: "Automated GitHub profile README with generated featured projects and custom profile assets."
+};
 
-if (!token) {
-  throw new Error("GITHUB_TOKEN is required to update the profile README.");
+function getRepositoryDescription(repo) {
+  return descriptionOverrides[repo.name] || repo.description || "No description provided.";
 }
 
-const octokit = new Octokit({ auth: token });
+function compareRepositories(left, right) {
+  const leftHasDescription = Number(Boolean(descriptionOverrides[left.name] || left.description));
+  const rightHasDescription = Number(Boolean(descriptionOverrides[right.name] || right.description));
+
+  if (rightHasDescription !== leftHasDescription) {
+    return rightHasDescription - leftHasDescription;
+  }
+
+  if (Number(!right.fork) !== Number(!left.fork)) {
+    return Number(!right.fork) - Number(!left.fork);
+  }
+
+  if (right.stargazers_count !== left.stargazers_count) {
+    return right.stargazers_count - left.stargazers_count;
+  }
+
+  return new Date(right.updated_at) - new Date(left.updated_at);
+}
+
+async function requestGitHub(pathname, searchParams = {}) {
+  const url = new URL(`https://api.github.com${pathname}`);
+
+  Object.entries(searchParams).forEach(([key, value]) => {
+    url.searchParams.set(key, String(value));
+  });
+
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "User-Agent": "soloisthart-profile-readme-updater"
+  };
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  const response = await fetch(url, { headers });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API request failed with ${response.status} ${response.statusText}.`);
+  }
+
+  return response.json();
+}
 
 function formatUpdatedLabel(dateString) {
   const updated = new Date(dateString);
@@ -37,18 +81,11 @@ function buildTable(repositories) {
   ];
 
   const rows = repositories.map((repo) => {
-    const description = (repo.description || "No description provided.")
+    const description = getRepositoryDescription(repo)
       .replace(/\|/g, "\\|")
       .slice(0, 110);
 
-    return [
-      `| [${repo.name}](${repo.html_url})`,
-      `${description}`,
-      `${repo.language || "N/A"}`,
-      `${repo.stargazers_count}`,
-      `${formatUpdatedLabel(repo.updated_at)}`,
-      "|"
-    ].join(" ");
+    return `| [${repo.name}](${repo.html_url}) | ${description} | ${repo.language || "N/A"} | ${repo.stargazers_count} | ${formatUpdatedLabel(repo.updated_at)} |`;
   });
 
   return [...header, ...rows].join("\n");
@@ -68,37 +105,28 @@ function replaceFeaturedProjects(readme, table) {
 }
 
 async function getFeaturedRepositories() {
-  const repositories = await octokit.paginate(octokit.repos.listForUser, {
-    username,
+  const repositories = await requestGitHub(`/users/${username}/repos`, {
     per_page: 100,
     sort: "updated"
   });
 
   const publicRepositories = repositories.filter((repo) => !repo.private);
+  const candidateRepositories = publicRepositories.filter((repo) => repo.name !== username);
+  const repositoriesForSelection = candidateRepositories.length > 0
+    ? candidateRepositories
+    : publicRepositories;
 
-  const featuredRepositories = publicRepositories
+  const featuredRepositories = repositoriesForSelection
     .filter((repo) => Array.isArray(repo.topics) && repo.topics.includes(featuredTopic))
-    .sort((left, right) => {
-      if (right.stargazers_count !== left.stargazers_count) {
-        return right.stargazers_count - left.stargazers_count;
-      }
-
-      return new Date(right.updated_at) - new Date(left.updated_at);
-    });
+    .sort(compareRepositories);
 
   if (featuredRepositories.length > 0) {
-    return featuredRepositories.slice(0, 8);
+    return featuredRepositories.slice(0, 6);
   }
 
-  return publicRepositories
-    .sort((left, right) => {
-      if (right.stargazers_count !== left.stargazers_count) {
-        return right.stargazers_count - left.stargazers_count;
-      }
-
-      return new Date(right.updated_at) - new Date(left.updated_at);
-    })
-    .slice(0, 8);
+  return repositoriesForSelection
+    .sort(compareRepositories)
+    .slice(0, 6);
 }
 
 async function main() {

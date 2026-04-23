@@ -4,29 +4,27 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3200&pause=900&color=F6BD60&vCenter=true&repeat=false&width=720&lines=Hi%2C+I%27m+Soloist+Hart.;I+build+thoughtful+software+and+shipped+systems.)](https://git.io/typing-svg)
 
-I build software with a bias for calm interfaces, maintainable systems, and steady iteration.
+I build thoughtful software across product UI, workflow automation, and AI-assisted tooling, with a bias for calm interfaces and maintainable systems.
 
-### Profile Snapshot
-
-- Focus: polished products, automation, and frontend-heavy systems
-- Working style: practical, iterative, and shipping-oriented
-- Add later: location, preferred contact email, and primary professional links
+<p align="left">
+  <a href="https://portfolio-hart.vercel.app">Portfolio</a>
+  ·
+  <a href="https://github.com/SoloistHart/Portfolio-Hart">Portfolio-Hart</a>
+  ·
+  <a href="https://github.com/SoloistHart?tab=repositories">All repositories</a>
+</p>
 
 ### Current Focus
 
-- Building polished product experiences from messy real-world requirements.
-- Shipping practical automation, internal tools, and frontend-heavy projects.
-- Learning in public through shipped repositories instead of placeholder ideas.
+- Designing premium frontend experiences with a calm visual system.
+- Building practical tools around workflows, automation, and AI-assisted development.
+- Shipping small, focused iterations instead of accumulating half-finished concepts.
 
-### Achievements
+### Selected Work
 
-- Add notable wins, launches, internships, hackathons, or recognitions here.
-- Keep this section outcome-based rather than skill-list based.
-
-### Certifications
-
-- Add formal certifications, programs, or high-signal courses here.
-- Use the issue date or completion month once you customize it.
+- [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) - Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system.
+- [SoloistHart](https://github.com/SoloistHart/SoloistHart) - Automated GitHub profile README with generated featured projects and custom profile assets.
+- [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) - GitHub Copilot Dev Days laboratory used for hands-on tool experimentation.
 
 ### Stack Snapshot
 
@@ -43,22 +41,6 @@ I build software with a bias for calm interfaces, maintainable systems, and stea
     alt="GitHub stats"
   />
   <img
-    src="https://github-readme-streak-stats.herokuapp.com/?user=SoloistHart&theme=transparent&hide_border=true"
-    height="170"
-    alt="GitHub streak stats"
-  />
-</p>
-
-<p align="left">
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=SoloistHart&theme=github-compact&hide_border=true&area=true"
-    width="100%"
-    alt="GitHub activity graph"
-  />
-</p>
-
-<p align="left">
-  <img
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=SoloistHart&layout=compact&langs_count=6&theme=transparent&hide_border=true"
     height="170"
     alt="Top languages"
@@ -70,12 +52,14 @@ I build software with a bias for calm interfaces, maintainable systems, and stea
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
 | ---------- | ----------- | ---------------- | ----- | ------------ |
-| _Run `npm run update:readme` after setting `GITHUB_TOKEN` to populate this table._ | - | - | - | - |
+| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">8 days ago</span> |
+| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">6 days ago</span> |
+| [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">12 days ago</span> |
 <!-- featured-projects:end -->
 
 ### Notes
 
 - This profile README is generated from repository data and can be refreshed automatically.
 - Repositories tagged with the `featured` topic are prioritized in the project table.
-- Content and visual direction can be customized further without changing the automation flow.
-- The current profile summary, achievements, and certifications are intentionally scaffolded for later personalization.
+- When no repositories are tagged, the updater falls back to public, non-fork repositories sorted by signal and recency.
+- Content and visual direction can keep evolving without changing the automation flow.
