@@ -1,0 +1,11 @@
+{
+  "name": "soloisthart-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:readme": "node scripts/update-readme.mjs"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.1.1"
+  }
+}
