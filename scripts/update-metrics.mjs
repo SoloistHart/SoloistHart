@@ -311,22 +311,22 @@ function renderMetricsSvg(metrics) {
 
   <text x="520" y="76" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" letter-spacing="2">CONTRIBUTION SNAPSHOT</text>
 
-  <text x="575" y="132" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.contributions.total))}</text>
+  <text x="575" y="132" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.contributions.total))}</text>
   <text x="575" y="162" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">Total Contributions</text>
-  <text x="575" y="188" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Last 12 months</text>
+  <text x="575" y="188" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Last 12 months</text>
 
   <path d="M649 98V226" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
 
-  <circle cx="720" cy="150" r="32" fill="none" stroke="#7FA9FF" stroke-width="6" />
-  <text x="720" y="158" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.currentStreak.count))}</text>
-  <text x="720" y="200" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Current Streak</text>
-  <text x="720" y="222" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">${escapeXml(describeStreak(metrics.currentStreak, true))}</text>
+  <circle cx="720" cy="150" r="32" fill="none" stroke="#D8B77A" stroke-width="6" />
+  <text x="720" y="158" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.currentStreak.count))}</text>
+  <text x="720" y="200" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Current Streak</text>
+  <text x="720" y="222" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">${escapeXml(describeStreak(metrics.currentStreak, true))}</text>
 
   <path d="M775 98V226" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
 
-  <text x="838" y="132" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.longestStreak.count))}</text>
+  <text x="838" y="132" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.longestStreak.count))}</text>
   <text x="838" y="162" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">Longest Streak</text>
-  <text x="838" y="188" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">${escapeXml(describeStreak(metrics.longestStreak))}</text>
+  <text x="838" y="188" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">${escapeXml(describeStreak(metrics.longestStreak))}</text>
 </svg>`;
 }
 

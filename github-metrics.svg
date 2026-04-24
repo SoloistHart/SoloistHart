@@ -31,7 +31,7 @@
 
         <g transform="translate(64 163)"><circle cx="0" cy="0" r="7" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M0 -3V0L3 2" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" /></g>
         <text x="84" y="168" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600">Total Commits (last year):</text>
-        <text x="296" y="168" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">24</text>
+        <text x="296" y="168" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">25</text>
       
 
         <g transform="translate(64 193)"><circle cx="-6" cy="-6" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><circle cx="6" cy="0" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><circle cx="-6" cy="6" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M-3.4 -4.2H1.8M-6 -3V3" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" /></g>
@@ -50,25 +50,25 @@
       
   <circle cx="390" cy="166" r="44" fill="none" stroke="rgba(216,183,122,0.22)" stroke-width="8" />
   <circle cx="390" cy="166" r="44" fill="rgba(216,183,122,0.08)" />
-  <text x="390" y="175" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">380</text>
+  <text x="390" y="175" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">381</text>
   <text x="390" y="226" fill="#A8B1BE" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle">Last 12 months</text>
 
   <text x="520" y="76" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" letter-spacing="2">CONTRIBUTION SNAPSHOT</text>
 
-  <text x="575" y="132" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">380</text>
+  <text x="575" y="132" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">381</text>
   <text x="575" y="162" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">Total Contributions</text>
-  <text x="575" y="188" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Last 12 months</text>
+  <text x="575" y="188" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle">Last 12 months</text>
 
   <path d="M649 98V226" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
 
-  <circle cx="720" cy="150" r="32" fill="none" stroke="#7FA9FF" stroke-width="6" />
-  <text x="720" y="158" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">3</text>
-  <text x="720" y="200" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Current Streak</text>
-  <text x="720" y="222" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">Apr 22 - Present</text>
+  <circle cx="720" cy="150" r="32" fill="none" stroke="#D8B77A" stroke-width="6" />
+  <text x="720" y="158" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">3</text>
+  <text x="720" y="200" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Current Streak</text>
+  <text x="720" y="222" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">Apr 22 - Present</text>
 
   <path d="M775 98V226" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
 
-  <text x="838" y="132" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">6</text>
+  <text x="838" y="132" fill="#F1D4A3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">6</text>
   <text x="838" y="162" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">Longest Streak</text>
-  <text x="838" y="188" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">Mar 23 - Mar 28</text>
+  <text x="838" y="188" fill="#BCA381" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="middle">Mar 23 - Mar 28</text>
 </svg>

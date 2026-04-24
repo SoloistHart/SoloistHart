@@ -1,6 +1,6 @@
 <svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Soloist Hart professional profile hero</title>
-  <desc id="desc">A minimal professional profile hero for Soloist Hart with a fully readable animated role line and supporting expertise pills.</desc>
+  <desc id="desc">A minimal professional profile hero for Soloist Hart with a fully readable role line and animated expertise pills.</desc>
   <style>
     .ui {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -21,10 +21,6 @@
 
     .halo {
       animation: drift 11s ease-in-out infinite;
-    }
-
-    .cursor {
-      animation: cursorBlink 1s steps(2, end) infinite;
     }
 
     .pill-a {
@@ -52,11 +48,6 @@
     @keyframes drift {
       0%, 100% { transform: translate(0, 0); }
       50% { transform: translate(-10px, 8px); }
-    }
-
-    @keyframes cursorBlink {
-      0%, 46% { opacity: 1; }
-      50%, 100% { opacity: 0; }
     }
 
     @keyframes pillIn {
@@ -118,7 +109,6 @@
   <text x="64" y="148" fill="url(#accent)" class="ui" font-size="54" font-weight="700" letter-spacing="0.4">Rhohart Martel</text>
   <text x="66" y="182" fill="#A8B1BE" class="ui" font-size="13.5">Professional focus</text>
   <text x="64" y="214" fill="#E8E2D8" class="ui" font-size="22" font-weight="600">Internal tools, automation systems, AI reporting</text>
-  <rect x="520" y="194" width="2" height="26" rx="1" fill="#D8B77A" class="cursor" />
 
   <path d="M60 240H504" stroke="rgba(216,183,122,0.24)" stroke-width="1" />
 
