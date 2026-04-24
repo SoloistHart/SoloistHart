@@ -1,55 +1,82 @@
-<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Soloist Hart banner</title>
-  <desc id="desc">An editorial-style profile banner for the SoloistHart GitHub profile README.</desc>
+<svg width="960" height="300" viewBox="0 0 960 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Soloist Hart retro signal banner</title>
+  <desc id="desc">A retro terminal-inspired GitHub profile banner with signal grid styling and an ASCII self portrait panel.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#101114" />
-      <stop offset="0.48" stop-color="#171B22" />
-      <stop offset="1" stop-color="#202735" />
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090807" />
+      <stop offset="0.56" stop-color="#12100D" />
+      <stop offset="1" stop-color="#17130F" />
     </linearGradient>
-    <linearGradient id="sand" x1="88" y1="42" x2="534" y2="160" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F2C572" />
-      <stop offset="0.52" stop-color="#E7B86A" />
-      <stop offset="1" stop-color="#D8A24A" />
+    <linearGradient id="amber" x1="72" y1="64" x2="420" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD089" />
+      <stop offset="0.46" stop-color="#F6BD60" />
+      <stop offset="1" stop-color="#D69024" />
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(742 76) rotate(140) scale(248 166)">
-      <stop stop-color="#F2C572" stop-opacity="0.2" />
-      <stop offset="0.46" stop-color="#C38A38" stop-opacity="0.08" />
-      <stop offset="1" stop-color="#C38A38" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="lineFade" x1="116" y1="0" x2="796" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F2C572" stop-opacity="0" />
-      <stop offset="0.24" stop-color="#F2C572" stop-opacity="0.62" />
-      <stop offset="0.72" stop-color="#F2C572" stop-opacity="0.34" />
-      <stop offset="1" stop-color="#F2C572" stop-opacity="0" />
-    </linearGradient>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 7.5H8" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+    </pattern>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" stroke="rgba(246,189,96,0.08)" stroke-width="1" />
+    </pattern>
+    <filter id="softGlow" x="0" y="0" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <clipPath id="portraitClip">
+      <rect x="603" y="56" width="292" height="188" rx="18" />
+    </clipPath>
   </defs>
 
-  <rect width="900" height="220" rx="28" fill="url(#bg)" />
-  <rect x="12" y="12" width="876" height="196" rx="20" stroke="rgba(255,255,255,0.08)" />
-  <rect x="52" y="42" width="100" height="24" rx="12" fill="rgba(242,197,114,0.12)" />
-  <text x="70" y="58" fill="#F3D39A" font-family="Verdana, Geneva, sans-serif" font-size="11" letter-spacing="2.8">
-    SOLOIST HART
-  </text>
+  <rect width="960" height="300" rx="28" fill="url(#bg)" />
+  <rect width="960" height="300" rx="28" fill="url(#scan)" />
+  <rect width="960" height="300" rx="28" fill="url(#grid)" opacity="0.8" />
+  <rect x="14" y="14" width="932" height="272" rx="20" stroke="rgba(255,255,255,0.1)" />
+  <rect x="34" y="34" width="892" height="232" rx="18" stroke="rgba(246,189,96,0.18)" />
 
-  <path d="M0 162H900" stroke="url(#lineFade)" stroke-width="1.2" />
-  <path d="M0 175C95 165 166 150 247 147C334 144 409 158 492 158C587 158 671 139 760 133C810 130 856 133 900 145" stroke="rgba(242,197,114,0.22)" stroke-width="1.2" />
-  <path d="M516 188C590 172 645 164 706 164C773 164 835 173 900 191" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <circle cx="68" cy="58" r="5" fill="#FF6B57" />
+  <circle cx="86" cy="58" r="5" fill="#F6BD60" />
+  <circle cx="104" cy="58" r="5" fill="#6BCB77" />
+  <text x="132" y="62" fill="#BDA585" font-family="'Courier New', monospace" font-size="12" letter-spacing="1.8">soloisthart.signal / profile.readme</text>
 
-  <ellipse cx="742" cy="78" rx="184" ry="108" fill="url(#glow)" />
-  <circle cx="776" cy="76" r="34" fill="rgba(242,197,114,0.08)" />
-  <circle cx="776" cy="76" r="18" fill="rgba(242,197,114,0.15)" />
-  <path d="M632 58H838" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-  <path d="M660 94H820" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-  <path d="M688 130H802" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <text x="66" y="98" fill="#8A7356" font-family="'Courier New', monospace" font-size="11" letter-spacing="2.4">RETRO SIGNAL README</text>
+  <text x="64" y="146" fill="url(#amber)" font-family="'Courier New', monospace" font-size="46" font-weight="700" letter-spacing="1.2">SOLOIST HART</text>
+  <text x="66" y="173" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="15" letter-spacing="0.4">AI engineer / workflow automation specialist / system-minded builder</text>
 
-  <text x="68" y="116" fill="url(#sand)" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="1.4">
-    Soloist Hart
-  </text>
-  <text x="70" y="148" fill="#ECE5DA" font-family="Verdana, Geneva, sans-serif" font-size="15" letter-spacing="1.15">
-    Interfaces, systems, and shipped work.
-  </text>
-  <text x="70" y="176" fill="rgba(236,229,218,0.74)" font-family="Verdana, Geneva, sans-serif" font-size="11" letter-spacing="2.4">
-    CALM PRODUCT BUILDING  /  AUTOMATION  /  AI-ASSISTED DEVELOPMENT
-  </text>
+  <text x="66" y="210" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; whoami</text>
+  <text x="162" y="210" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">Rhohart Martel</text>
+  <text x="66" y="232" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; build_mode</text>
+  <text x="194" y="232" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">internal tools / dashboards / AI systems / operations</text>
+  <text x="66" y="254" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; status</text>
+  <text x="154" y="254" fill="#F6BD60" font-family="'Courier New', monospace" font-size="13">ONLINE</text>
+
+  <rect x="603" y="56" width="292" height="188" rx="18" fill="rgba(7,6,5,0.72)" stroke="rgba(246,189,96,0.24)" />
+  <rect x="603" y="56" width="292" height="188" rx="18" fill="url(#scan)" opacity="0.65" />
+  <text x="625" y="79" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.8">identity.render / ascii portrait</text>
+  <g clip-path="url(#portraitClip)">
+    <text x="620" y="101" fill="#F1C77B" font-family="'Courier New', monospace" font-size="6.4" xml:space="preserve">
+      <tspan x="620" dy="0">                ::::</tspan>
+      <tspan x="620" dy="9">                ;+XX++;;+X$$XXX:</tspan>
+      <tspan x="620" dy="9">                  :;+XXX++;+X$&amp;&amp;&amp;X</tspan>
+      <tspan x="620" dy="9">                    :+X+</tspan>
+      <tspan x="620" dy="9">           :++      ;$X+    :X$&amp;&amp;&amp;&amp;&amp;$</tspan>
+      <tspan x="620" dy="9">              ;     $&amp;&amp;X     +$&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
+      <tspan x="620" dy="9">             :      XX&amp;+       :$$&amp;&amp;&amp;&amp;$</tspan>
+      <tspan x="620" dy="9">                   :$&amp;&amp;:X     +:  :&amp;&amp;&amp;&amp;;</tspan>
+      <tspan x="620" dy="9">                    ;$&amp;&amp;&amp;&amp;X:  +$&amp;&amp;&amp;&amp;&amp;&amp;$X</tspan>
+      <tspan x="620" dy="9">                     +;X&amp;$&amp;&amp;$+X$&amp;&amp;&amp;&amp;$&amp;&amp;;</tspan>
+      <tspan x="620" dy="9">                     +  :&amp;X$X:::;+&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
+      <tspan x="620" dy="9">                  +X+$&amp;X ++;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
+      <tspan x="620" dy="9">                  $X +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;$</tspan>
+      <tspan x="620" dy="9">                    ;;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ ;</tspan>
+      <tspan x="620" dy="9">                         +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
+    </text>
+  </g>
+
+  <path d="M590 32V268" stroke="rgba(246,189,96,0.18)" stroke-width="1" stroke-dasharray="4 8" />
+  <path d="M52 188H564" stroke="rgba(246,189,96,0.22)" stroke-width="1" />
+  <circle cx="560" cy="188" r="3" fill="#F6BD60" filter="url(#softGlow)" />
+  <text x="620" y="262" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.6">systems with taste / shipped work over noise</text>
 </svg>
