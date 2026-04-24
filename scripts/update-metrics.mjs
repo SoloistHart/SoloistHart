@@ -16,6 +16,12 @@ const query = `
       contributionsCollection(from: $from, to: $to) {
         contributionCalendar {
           totalContributions
+          weeks {
+            contributionDays {
+              contributionCount
+              date
+            }
+          }
         }
         totalCommitContributions
         totalIssueContributions
@@ -34,18 +40,8 @@ const query = `
           endCursor
         }
         nodes {
-          name
           isPrivate
           stargazerCount
-          languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
-            edges {
-              size
-              node {
-                name
-                color
-              }
-            }
-          }
         }
       }
     }
@@ -63,6 +59,107 @@ function escapeXml(value) {
     .replace(/>/g, "&gt;")
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&apos;");
+}
+
+function formatShortDate(value) {
+  return new Date(value).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+}
+
+function formatCompactDate(value) {
+  return new Date(value).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function getDaysBetween(start, end) {
+  return Math.round((end - start) / (1000 * 60 * 60 * 24));
+}
+
+function computeStreaks(days) {
+  const normalizedDays = days
+    .map((day) => ({ ...day, dateObject: new Date(day.date) }))
+    .sort((left, right) => left.dateObject - right.dateObject);
+
+  let currentStreak = { count: 0, start: null, end: null };
+
+  for (let index = normalizedDays.length - 1; index >= 0; index -= 1) {
+    const day = normalizedDays[index];
+
+    if (day.contributionCount <= 0) {
+      if (index === normalizedDays.length - 1) {
+        currentStreak = { count: 0, start: null, end: null };
+      }
+      break;
+    }
+
+    if (currentStreak.count === 0) {
+      currentStreak = { count: 1, start: day.date, end: day.date };
+      continue;
+    }
+
+    const previous = normalizedDays[index + 1];
+    const dayDiff = getDaysBetween(day.dateObject, previous.dateObject);
+
+    if (dayDiff === 1) {
+      currentStreak.count += 1;
+      currentStreak.start = day.date;
+    } else {
+      break;
+    }
+  }
+
+  let longestStreak = { count: 0, start: null, end: null };
+  let activeStreak = { count: 0, start: null, end: null };
+
+  for (const day of normalizedDays) {
+    if (day.contributionCount > 0) {
+      if (activeStreak.count === 0) {
+        activeStreak = { count: 1, start: day.date, end: day.date };
+      } else {
+        const previousDate = new Date(activeStreak.end);
+        const currentDate = new Date(day.date);
+        const dayDiff = getDaysBetween(previousDate, currentDate);
+
+        if (dayDiff === 1) {
+          activeStreak.count += 1;
+          activeStreak.end = day.date;
+        } else {
+          if (activeStreak.count > longestStreak.count) {
+            longestStreak = { ...activeStreak };
+          }
+          activeStreak = { count: 1, start: day.date, end: day.date };
+        }
+      }
+    } else if (activeStreak.count > 0) {
+      if (activeStreak.count > longestStreak.count) {
+        longestStreak = { ...activeStreak };
+      }
+      activeStreak = { count: 0, start: null, end: null };
+    }
+  }
+
+  if (activeStreak.count > longestStreak.count) {
+    longestStreak = { ...activeStreak };
+  }
+
+  return { currentStreak, longestStreak };
+}
+
+function describeStreak(streak, isCurrent = false) {
+  if (!streak.count || !streak.start || !streak.end) {
+    return isCurrent ? "No active streak" : "No streak recorded";
+  }
+
+  if (isCurrent) {
+    return `${formatCompactDate(streak.start)} - Present`;
+  }
+
+  return `${formatCompactDate(streak.start)} - ${formatCompactDate(streak.end)}`;
 }
 
 async function requestGitHubGraphQL(variables) {
@@ -119,42 +216,16 @@ async function getMetrics() {
     after = viewer.repositories.pageInfo.endCursor;
   }
 
-  const languageTotals = new Map();
-  let totalStars = 0;
-  let privateRepos = 0;
-
-  for (const repository of repositories) {
-    totalStars += repository.stargazerCount;
-
-    if (repository.isPrivate) {
-      privateRepos += 1;
-    }
-
-    for (const edge of repository.languages.edges) {
-      const existing = languageTotals.get(edge.node.name) || { size: 0, color: edge.node.color || "#D8B77A" };
-      existing.size += edge.size;
-      existing.color = edge.node.color || existing.color || "#D8B77A";
-      languageTotals.set(edge.node.name, existing);
-    }
-  }
-
-  const sortedLanguages = [...languageTotals.entries()]
-    .map(([name, details]) => ({ name, ...details }))
-    .sort((left, right) => right.size - left.size)
-    .slice(0, 6);
-
-  const totalLanguageSize = sortedLanguages.reduce((sum, language) => sum + language.size, 0) || 1;
-  const languages = sortedLanguages.map((language) => ({
-    ...language,
-    percentage: (language.size / totalLanguageSize) * 100
-  }));
+  const totalStars = repositories.reduce((sum, repository) => sum + repository.stargazerCount, 0);
+  const privateRepos = repositories.filter((repository) => repository.isPrivate).length;
+  const contributionDays = contributionData?.contributionCalendar.weeks.flatMap((week) => week.contributionDays) || [];
+  const { currentStreak, longestStreak } = computeStreaks(contributionDays);
 
   return {
     login,
+    totalStars,
     totalRepos: repositories.length,
     privateRepos,
-    publicRepos: repositories.length - privateRepos,
-    totalStars,
     contributions: contributionData
       ? {
           total: contributionData.contributionCalendar.totalContributions,
@@ -172,86 +243,51 @@ async function getMetrics() {
           privateCount: 0,
           repositoriesContributed: 0
         },
-    languages
+    currentStreak,
+    longestStreak
   };
 }
 
-function buildLanguageLegend(languages) {
-  return languages
-    .map((language, index) => {
-      const x = index % 2 === 0 ? 572 : 742;
-      const y = 302 + Math.floor(index / 2) * 30;
-      const label = `${language.name} ${language.percentage.toFixed(1)}%`;
+function renderStatsRows(metrics) {
+  const rows = [
+    { label: "Total Stars Earned", value: metrics.totalStars, icon: "star" },
+    { label: "Total Commits (last year)", value: metrics.contributions.commits, icon: "commit" },
+    { label: "Total PRs", value: metrics.contributions.pullRequests, icon: "pr" },
+    { label: "Total Issues", value: metrics.contributions.issues, icon: "issue" },
+    { label: "Private Contributions", value: metrics.contributions.privateCount, icon: "lock" }
+  ];
 
-      return [
-        `<circle cx="${x}" cy="${y}" r="6" fill="${language.color || "#D8B77A"}" />`,
-        `<text x="${x + 16}" y="${y + 5}" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="13">${escapeXml(label)}</text>`
-      ].join("\n");
-    })
-    .join("\n");
-}
+  const icons = {
+    star: '<path d="M0 -8L2.3 -2.5L8 0L2.3 2.5L0 8L-2.3 2.5L-8 0L-2.3 -2.5Z" fill="none" stroke="#D8B77A" stroke-width="1.6" stroke-linejoin="round" />',
+    commit: '<circle cx="0" cy="0" r="7" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M0 -3V0L3 2" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" />',
+    pr: '<circle cx="-6" cy="-6" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><circle cx="6" cy="0" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><circle cx="-6" cy="6" r="3" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M-3.4 -4.2H1.8M-6 -3V3" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" />',
+    issue: '<circle cx="0" cy="0" r="7" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M0 -3V1" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" /><circle cx="0" cy="4" r="1" fill="#D8B77A" />',
+    lock: '<rect x="-5.5" y="-1" width="11" height="9" rx="2" fill="none" stroke="#D8B77A" stroke-width="1.6" /><path d="M-3.2 -1V-3.2C-3.2 -5  -1.8 -6.5 0 -6.5C1.8 -6.5 3.2 -5 3.2 -3.2V-1" stroke="#D8B77A" stroke-width="1.6" stroke-linecap="round" />'
+  };
 
-function buildLanguageBar(languages) {
-  const totalWidth = 320;
-  let offset = 0;
-
-  return languages
-    .map((language) => {
-      const width = Math.max(12, Math.round((language.percentage / 100) * totalWidth));
-      const rect = `<rect x="${560 + offset}" y="252" width="${width}" height="12" rx="6" fill="${language.color || "#D8B77A"}" />`;
-      offset += width;
-      return rect;
+  return rows
+    .map((row, index) => {
+      const y = 126 + index * 30;
+      return `
+        <g transform="translate(64 ${y - 5})">${icons[row.icon]}</g>
+        <text x="84" y="${y}" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">${escapeXml(row.label)}:</text>
+        <text x="296" y="${y}" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">${escapeXml(formatNumber(row.value))}</text>
+      `;
     })
     .join("\n");
 }
 
 function renderMetricsSvg(metrics) {
-  const cards = [
-    { label: "Contributions", value: formatNumber(metrics.contributions.total), subtext: "Last 12 months" },
-    { label: "Owned repos", value: formatNumber(metrics.totalRepos), subtext: `${formatNumber(metrics.privateRepos)} private` },
-    { label: "Stars earned", value: formatNumber(metrics.totalStars), subtext: "Across owned repos" },
-    { label: "Code touchpoints", value: formatNumber(metrics.contributions.repositoriesContributed), subtext: "Repos with contributed commits" }
-  ];
-
-  const cardMarkup = cards
-    .map((card, index) => {
-      const x = 64 + index * 118;
-      return `
-        <rect x="${x}" y="132" width="102" height="92" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
-        <text x="${x + 16}" y="158" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1.5">${escapeXml(card.label.toUpperCase())}</text>
-        <text x="${x + 16}" y="191" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">${escapeXml(card.value)}</text>
-        <text x="${x + 16}" y="211" fill="#A8B1BE" font-family="Segoe UI, Arial, sans-serif" font-size="12">${escapeXml(card.subtext)}</text>
-      `;
-    })
-    .join("\n");
-
-  const breakdown = [
-    { label: "Commits", value: metrics.contributions.commits },
-    { label: "Pull requests", value: metrics.contributions.pullRequests },
-    { label: "Issues", value: metrics.contributions.issues },
-    { label: "Private contributions", value: metrics.contributions.privateCount }
-  ];
-
-  const breakdownMarkup = breakdown
-    .map((item, index) => {
-      const y = 286 + index * 34;
-      return `
-        <text x="80" y="${y}" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="14">${escapeXml(item.label)}</text>
-        <text x="344" y="${y}" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">${escapeXml(formatNumber(item.value))}</text>
-      `;
-    })
-    .join("\n");
-
-  return `<svg width="960" height="420" viewBox="0 0 960 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  return `<svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">GitHub metrics for ${escapeXml(metrics.login)}</title>
-  <desc id="desc">Private-aware GitHub metrics generated for ${escapeXml(metrics.login)}, including contribution totals, repository counts, and top languages.</desc>
+  <desc id="desc">Private-aware GitHub metrics generated for ${escapeXml(metrics.login)}, including contribution totals and streaks.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="420" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="320" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0B1016" />
       <stop offset="0.58" stop-color="#101722" />
       <stop offset="1" stop-color="#151C28" />
     </linearGradient>
-    <linearGradient id="accent" x1="72" y1="74" x2="328" y2="132" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accent" x1="56" y1="44" x2="290" y2="98" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F1D4A3" />
       <stop offset="0.48" stop-color="#D8B77A" />
       <stop offset="1" stop-color="#B78B44" />
@@ -260,21 +296,37 @@ function renderMetricsSvg(metrics) {
       <path d="M34 0H0V34" stroke="rgba(216,183,122,0.06)" stroke-width="1" />
     </pattern>
   </defs>
-  <rect width="960" height="420" rx="24" fill="url(#bg)" />
-  <rect width="960" height="420" rx="24" fill="url(#grid)" opacity="0.8" />
-  <rect x="14" y="14" width="932" height="392" rx="18" stroke="rgba(255,255,255,0.08)" />
-  <rect x="34" y="34" width="892" height="352" rx="18" stroke="rgba(216,183,122,0.14)" />
-  <text x="64" y="84" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="3">GITHUB METRICS</text>
-  <text x="64" y="126" fill="url(#accent)" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Private-aware account snapshot</text>
-  <text x="64" y="156" fill="#A8B1BE" font-family="Segoe UI, Arial, sans-serif" font-size="14">Generated from your authenticated GitHub data, including private contribution visibility when the token allows it.</text>
-  ${cardMarkup}
-  <rect x="64" y="248" width="308" height="150" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
-  <text x="80" y="274" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="2">CONTRIBUTION BREAKDOWN</text>
-  ${breakdownMarkup}
-  <rect x="392" y="248" width="472" height="150" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
-  <text x="560" y="234" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="2">TOP LANGUAGES</text>
-  ${buildLanguageBar(metrics.languages)}
-  ${buildLanguageLegend(metrics.languages)}
+  <rect width="960" height="320" rx="24" fill="url(#bg)" />
+  <rect width="960" height="320" rx="24" fill="url(#grid)" opacity="0.72" />
+  <rect x="14" y="14" width="932" height="292" rx="18" stroke="rgba(255,255,255,0.08)" />
+  <rect x="30" y="30" width="436" height="260" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+  <rect x="494" y="30" width="436" height="260" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+
+  <text x="56" y="72" fill="url(#accent)" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">${escapeXml(metrics.login)}&apos;s GitHub Stats</text>
+  ${renderStatsRows(metrics)}
+  <circle cx="390" cy="162" r="44" fill="none" stroke="rgba(216,183,122,0.22)" stroke-width="8" />
+  <circle cx="390" cy="162" r="44" fill="rgba(216,183,122,0.08)" />
+  <text x="390" y="171" fill="#F2ECE4" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.contributions.total))}</text>
+  <text x="390" y="196" fill="#A8B1BE" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" text-anchor="middle">Last 12 months</text>
+
+  <text x="520" y="64" fill="#8E98A5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="2.5">CONTRIBUTION SNAPSHOT</text>
+
+  <text x="566" y="112" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.contributions.total))}</text>
+  <text x="566" y="146" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="middle">Total Contributions</text>
+  <text x="566" y="174" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Last 12 months</text>
+
+  <path d="M676 78V224" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+
+  <circle cx="752" cy="140" r="44" fill="none" stroke="#7FA9FF" stroke-width="6" />
+  <text x="752" y="149" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.currentStreak.count))}</text>
+  <text x="752" y="202" fill="#C28CFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Current Streak</text>
+  <text x="752" y="226" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">${escapeXml(describeStreak(metrics.currentStreak, true))}</text>
+
+  <path d="M854 78V224" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+
+  <text x="892" y="112" fill="#7FA9FF" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle">${escapeXml(formatNumber(metrics.longestStreak.count))}</text>
+  <text x="892" y="146" fill="#D7C8B1" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="middle">Longest Streak</text>
+  <text x="892" y="174" fill="#53D6C8" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle">${escapeXml(describeStreak(metrics.longestStreak))}</text>
 </svg>`;
 }
 
