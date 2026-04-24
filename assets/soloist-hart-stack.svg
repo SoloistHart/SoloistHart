@@ -1,0 +1,95 @@
+<svg width="960" height="246" viewBox="0 0 960 246" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Soloist Hart tech stack overview</title>
+  <desc id="desc">A styled tech stack board showing the frontend, backend, automation, and tooling technologies used by Soloist Hart.</desc>
+  <style>
+    .ui {
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .eyebrow {
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .sweep {
+      animation: sweep 7s linear infinite;
+    }
+
+    .pulse {
+      animation: pulse 3.4s ease-in-out infinite;
+    }
+
+    @keyframes sweep {
+      0% { transform: translateX(-200px); }
+      100% { transform: translateX(980px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.95; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1016" />
+      <stop offset="0.58" stop-color="#101722" />
+      <stop offset="1" stop-color="#151C28" />
+    </linearGradient>
+    <linearGradient id="accent" x1="78" y1="52" x2="286" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1D4A3" />
+      <stop offset="0.48" stop-color="#D8B77A" />
+      <stop offset="1" stop-color="#B78B44" />
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" stroke="rgba(216,183,122,0.06)" stroke-width="1" />
+    </pattern>
+    <linearGradient id="sweepGrad" x1="0" y1="0" x2="180" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8B77A" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#D8B77A" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#D8B77A" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="246" rx="24" fill="url(#bg)" />
+  <rect width="960" height="246" rx="24" fill="url(#grid)" opacity="0.8" />
+  <rect x="14" y="14" width="932" height="218" rx="18" stroke="rgba(255,255,255,0.08)" />
+  <rect x="34" y="34" width="892" height="178" rx="18" stroke="rgba(216,183,122,0.14)" />
+
+  <text x="56" y="66" fill="#8E98A5" class="ui eyebrow" font-size="11">TECH STACK</text>
+  <text x="56" y="102" fill="url(#accent)" class="ui" font-size="30" font-weight="700">Core platforms and tools</text>
+
+  <g>
+    <rect x="56" y="130" width="196" height="64" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+    <text x="76" y="154" fill="#D8B77A" class="ui eyebrow" font-size="9">FRONTEND</text>
+    <text x="76" y="178" fill="#F2ECE4" class="ui" font-size="14">TypeScript  •  React</text>
+    <text x="76" y="196" fill="#A8B1BE" class="ui" font-size="13">Next.js  •  Tailwind CSS</text>
+  </g>
+
+  <g>
+    <rect x="270" y="130" width="196" height="64" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+    <text x="290" y="154" fill="#D8B77A" class="ui eyebrow" font-size="9">BACKEND</text>
+    <text x="290" y="178" fill="#F2ECE4" class="ui" font-size="14">Node.js  •  Express</text>
+    <text x="290" y="196" fill="#A8B1BE" class="ui" font-size="13">PostgreSQL  •  MySQL  •  MariaDB</text>
+  </g>
+
+  <g>
+    <rect x="484" y="130" width="196" height="64" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+    <text x="504" y="154" fill="#D8B77A" class="ui eyebrow" font-size="9">AUTOMATION</text>
+    <text x="504" y="178" fill="#F2ECE4" class="ui" font-size="14">n8n  •  OpenAI API</text>
+    <text x="504" y="196" fill="#A8B1BE" class="ui" font-size="13">Prompt workflows  •  AI reporting</text>
+  </g>
+
+  <g>
+    <rect x="698" y="130" width="196" height="64" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.18)" />
+    <text x="718" y="154" fill="#D8B77A" class="ui eyebrow" font-size="9">TOOLING</text>
+    <text x="718" y="178" fill="#F2ECE4" class="ui" font-size="14">Docker  •  Git  •  GitHub</text>
+    <text x="718" y="196" fill="#A8B1BE" class="ui" font-size="13">Vercel  •  Analytics dashboards</text>
+  </g>
+
+  <circle cx="864" cy="62" r="28" fill="rgba(216,183,122,0.08)" class="pulse" />
+  <circle cx="896" cy="84" r="7" fill="#D8B77A" class="pulse" />
+
+  <g class="sweep">
+    <rect x="0" y="0" width="180" height="246" fill="url(#sweepGrad)" opacity="0.1" />
+  </g>
+</svg>

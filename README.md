@@ -2,7 +2,7 @@
   <img width="100%" src="./assets/soloist-hart-hero.svg" alt="Soloist Hart professional profile hero" />
 </p>
 
-AI Engineer and workflow automation specialist building AI-powered business tools, workflow automation systems, and reporting products that turn operational complexity into measurable business outcomes.
+AI Engineer and workflow automation specialist building internal tools, workflow systems, and AI-assisted reporting products.
 
 <p align="left">
   <a href="mailto:martel.rhohart@gmail.com">Email</a>
@@ -48,12 +48,18 @@ AI Engineer and workflow automation specialist building AI-powered business tool
 - End-to-end n8n workflow automation for operations and content systems
 - AI assistants, prompt workflows, and agent-driven reporting experiences
 
+## Tech Stack
+
+<p align="left">
+  <img width="100%" src="./assets/soloist-hart-stack.svg" alt="Soloist Hart tech stack overview" />
+</p>
+
 ## GitHub Stats
 
 <table>
   <tr>
     <td valign="top" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=SoloistHart&show_icons=true&hide_border=true&title_color=D8B77A&icon_color=D8B77A&text_color=CABCA7&bg_color=00000000&rank_icon=github&include_all_commits=true" alt="GitHub stats for SoloistHart" />
+      <img src="https://github-readme-stats.vercel.app/api?username=SoloistHart&show_icons=true&hide_border=true&title_color=D8B77A&icon_color=D8B77A&text_color=CABCA7&bg_color=00000000&rank_icon=github&include_all_commits=true&count_private=true" alt="GitHub stats for SoloistHart" />
     </td>
     <td valign="top" width="50%">
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SoloistHart&layout=compact&hide_border=true&title_color=D8B77A&text_color=CABCA7&bg_color=00000000" alt="Top languages for SoloistHart" />
