@@ -36,9 +36,22 @@
 
 ## Tech Stack
 
-<p align="left">
-  <img width="100%" src="./assets/soloist-hart-stack.svg" alt="Soloist Hart tech stack overview" />
-</p>
+<table>
+  <tr>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/typescript/D8B77A" width="34" height="34" alt="TypeScript" /><br/><sub>TypeScript</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/react/D8B77A" width="34" height="34" alt="React" /><br/><sub>React</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/nextdotjs/D8B77A" width="34" height="34" alt="Next.js" /><br/><sub>Next.js</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/nodedotjs/D8B77A" width="34" height="34" alt="Node.js" /><br/><sub>Node.js</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/postgresql/D8B77A" width="34" height="34" alt="PostgreSQL" /><br/><sub>PostgreSQL</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/mysql/D8B77A" width="34" height="34" alt="MySQL" /><br/><sub>MySQL</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/n8n/D8B77A" width="34" height="34" alt="n8n" /><br/><sub>n8n</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/docker/D8B77A" width="34" height="34" alt="Docker" /><br/><sub>Docker</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/tailwindcss/D8B77A" width="34" height="34" alt="Tailwind CSS" /><br/><sub>Tailwind CSS</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/github/D8B77A" width="34" height="34" alt="GitHub" /><br/><sub>GitHub</sub></td>
+  </tr>
+</table>
 
 ## GitHub Stats
 
