@@ -1,15 +1,6 @@
 <p align="left">
-  <img width="100%" src="./assets/soloist-hart-hero.svg" alt="Soloist Hart animated retro signal hero" />
+  <img width="100%" src="./assets/soloist-hart-hero.svg" alt="Soloist Hart professional profile hero" />
 </p>
-
-```text
-> boot --profile soloisthart
-[online] rhohart martel
-[role  ] ai engineer / workflow automation specialist
-[focus ] internal tools, dashboards, automation systems, applied ai
-```
-
-<sub>RETRO SIGNAL README / system-minded product building / shipped work over noise</sub>
 
 AI Engineer and workflow automation specialist building AI-powered business tools, workflow automation systems, and reporting products that turn operational complexity into measurable business outcomes.
 
@@ -23,7 +14,7 @@ AI Engineer and workflow automation specialist building AI-powered business tool
   <a href="https://github.com/SoloistHart?tab=repositories">All repositories</a>
 </p>
 
-## /selected-systems
+## Selected Systems
 
 <table>
   <tr>
@@ -45,22 +36,32 @@ AI Engineer and workflow automation specialist building AI-powered business tool
   </tr>
 </table>
 
-## /build-signal
+## Impact Snapshot
 
-```text
-[mode ] shipping internal AI tools and workflow systems
-[proof] 30+ n8n workflows / 50% collection-rate lift in one deployed QA analytics campaign
-[stack] typescript / react / next.js / node.js / postgresql / mysql / docker / python
-[style] product-minded / automation-first / metrics-aware / shipped-work focused
-```
+- Built 30+ personalized n8n automation workflows across client accounts and operational use cases.
+- Helped improve collection rate by 50% in a deployed QA analytics campaign.
+- Built executive and behavioral analytics dashboards using React, Next.js, Node.js, PostgreSQL, and MariaDB.
 
-## /current-focus
+## Current Focus
 
 - AI dashboards and business-facing internal tools
 - End-to-end n8n workflow automation for operations and content systems
 - AI assistants, prompt workflows, and agent-driven reporting experiences
 
-## /repository-feed
+## GitHub Stats
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <img src="https://github-readme-stats.vercel.app/api?username=SoloistHart&show_icons=true&hide_border=true&title_color=D8B77A&icon_color=D8B77A&text_color=CABCA7&bg_color=00000000&rank_icon=github&include_all_commits=true" alt="GitHub stats for SoloistHart" />
+    </td>
+    <td valign="top" width="50%">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SoloistHart&layout=compact&hide_border=true&title_color=D8B77A&text_color=CABCA7&bg_color=00000000" alt="Top languages for SoloistHart" />
+    </td>
+  </tr>
+</table>
+
+## Repository Feed
 
 <details>
   <summary>Open generated featured repositories</summary>
