@@ -11,7 +11,7 @@
 
 <sub>RETRO SIGNAL README / system-minded product building / shipped work over noise</sub>
 
-AI Engineer and workflow automation specialist focused on AI-powered business tools, n8n automation pipelines, reporting systems, and productized internal software that turns operational complexity into measurable business outcomes.
+AI Engineer and workflow automation specialist building AI-powered business tools, workflow automation systems, and reporting products that turn operational complexity into measurable business outcomes.
 
 <p align="left">
   <a href="mailto:martel.rhohart@gmail.com">Email</a>
@@ -23,39 +23,47 @@ AI Engineer and workflow automation specialist focused on AI-powered business to
   <a href="https://github.com/SoloistHart?tab=repositories">All repositories</a>
 </p>
 
-## /signal-board
+## /selected-systems
 
-| Module | Output |
-| --- | --- |
-| Current build mode | AI dashboards, workflow automation, and business-facing internal tools |
-| Preferred stack | TypeScript, React, Next.js, Node.js, PostgreSQL, MySQL, Docker |
-| Working style | Product-minded, automation-first, metrics-aware, shipping over fluff |
+<table>
+  <tr>
+    <td valign="top" width="33%">
+      <strong><a href="https://github.com/SoloistHart/Portfolio-Hart">Portfolio-Hart</a></strong><br/>
+      Premium portfolio foundation built with a calm editorial visual system and motion-aware frontend architecture.<br/><br/>
+      <code>Next.js</code> <code>TypeScript</code> <code>Tailwind</code>
+    </td>
+    <td valign="top" width="33%">
+      <strong>QA AI Behavioral Dashboard</strong><br/>
+      AI-assisted QA system with KPI drilldowns, filtered exports, coaching insights, and PII-aware workflows for operations teams.<br/><br/>
+      <code>React</code> <code>Node.js</code> <code>PostgreSQL</code>
+    </td>
+    <td valign="top" width="33%">
+      <strong>Executive Productivity Dashboard</strong><br/>
+      Executive-facing reporting product for audit trends, breakdowns, productivity tracking, and business-facing performance views.<br/><br/>
+      <code>Next.js</code> <code>Node.js</code> <code>MariaDB</code>
+    </td>
+  </tr>
+</table>
 
-## /focus
+## /build-signal
 
-- Building AI-powered dashboards and internal business tools.
-- Designing end-to-end n8n workflow automation for operations and content systems.
-- Creating AI assistants, prompt workflows, and agent-driven reporting experiences.
+```text
+[mode ] shipping internal AI tools and workflow systems
+[proof] 30+ n8n workflows / 50% collection-rate lift in one deployed QA analytics campaign
+[stack] typescript / react / next.js / node.js / postgresql / mysql / docker / python
+[style] product-minded / automation-first / metrics-aware / shipped-work focused
+```
 
-## /shipped-signal
+## /current-focus
 
-- Built 30+ personalized n8n automation workflows across client accounts and operational use cases.
-- Helped improve collection rate by 50% in one deployed QA analytics campaign.
-- Built executive and behavioral analytics dashboards using React, Next.js, Node.js, PostgreSQL, MariaDB, and modern AI APIs.
+- AI dashboards and business-facing internal tools
+- End-to-end n8n workflow automation for operations and content systems
+- AI assistants, prompt workflows, and agent-driven reporting experiences
 
-## /selected-work
+## /repository-feed
 
-- [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) - Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system.
-- QA AI: Behavioral Analytics Dashboard - AI-assisted QA dashboard with KPI drilldowns, filtered exports, coaching insights, and PII-aware workflows.
-- QA AI: Executive Productivity Dashboard - Executive-facing reporting system for QA audit data, trend analysis, breakdowns, and performance tracking.
-
-## /stack-modules
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,express,postgres,mysql,docker,python,tailwind,git,github&perline=6" alt="Tech stack icons" />
-</p>
-
-## /featured-repositories
+<details>
+  <summary>Open generated featured repositories</summary>
 
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
@@ -65,9 +73,4 @@ AI Engineer and workflow automation specialist focused on AI-powered business to
 | [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">12 days ago</span> |
 <!-- featured-projects:end -->
 
-## /notes
-
-- This profile README is generated from repository data and can be refreshed automatically.
-- Repositories tagged with the `featured` topic are prioritized in the project table.
-- When no repositories are tagged, the updater falls back to public, non-fork repositories sorted by signal and recency.
-- Profile content is now anchored to resume-backed experience and can keep evolving without changing the automation flow.
+</details>
