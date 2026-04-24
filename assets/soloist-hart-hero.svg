@@ -1,6 +1,6 @@
 <svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Soloist Hart professional profile hero</title>
-  <desc id="desc">A professional animated profile hero for Soloist Hart with concise positioning, refined dark styling, and an impact snapshot panel.</desc>
+  <desc id="desc">A minimal professional profile hero for Soloist Hart with a typing-style role line and animated expertise pills.</desc>
   <style>
     .ui {
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -12,33 +12,31 @@
     }
 
     .pulse {
-      animation: pulse 3s ease-in-out infinite;
-    }
-
-    .fade {
-      animation: fade 5s ease-in-out infinite;
+      animation: pulse 3.2s ease-in-out infinite;
     }
 
     .sweep {
-      animation: sweep 6s linear infinite;
-    }
-
-    .bar-fill {
-      transform-origin: left center;
-      animation: fill 4.2s ease-in-out infinite;
+      animation: sweep 7s linear infinite;
     }
 
     .halo {
-      animation: drift 10s ease-in-out infinite;
+      animation: drift 11s ease-in-out infinite;
+    }
+
+    .pill-a {
+      animation: pillIn 6.4s ease-in-out infinite;
+    }
+
+    .pill-b {
+      animation: pillIn 6.4s ease-in-out infinite 0.2s;
+    }
+
+    .pill-c {
+      animation: pillIn 6.4s ease-in-out infinite 0.4s;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 0.45; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes fade {
-      0%, 100% { opacity: 0.82; }
       50% { opacity: 1; }
     }
 
@@ -47,28 +45,24 @@
       100% { transform: translateX(1020px); }
     }
 
-    @keyframes fill {
-      0%, 12% {
-        opacity: 0.25;
-        transform: scaleX(0.18);
-      }
-      42% {
-        opacity: 1;
-        transform: scaleX(0.96);
-      }
-      76% {
-        opacity: 0.8;
-        transform: scaleX(0.72);
-      }
-      100% {
-        opacity: 0.25;
-        transform: scaleX(0.18);
-      }
-    }
-
     @keyframes drift {
       0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-12px, 8px); }
+      50% { transform: translate(-10px, 8px); }
+    }
+
+    @keyframes pillIn {
+      0%, 26% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      36%, 84% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0.94;
+        transform: translateY(0);
+      }
     }
   </style>
   <defs>
@@ -77,13 +71,13 @@
       <stop offset="0.56" stop-color="#101722" />
       <stop offset="1" stop-color="#151C28" />
     </linearGradient>
-    <linearGradient id="accent" x1="60" y1="94" x2="412" y2="188" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accent" x1="60" y1="96" x2="430" y2="184" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F1D4A3" />
       <stop offset="0.48" stop-color="#D8B77A" />
       <stop offset="1" stop-color="#B78B44" />
     </linearGradient>
     <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
-      <path d="M0 7.5H8" stroke="rgba(255,255,255,0.035)" stroke-width="1" />
+      <path d="M0 7.5H8" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
     </pattern>
     <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
       <path d="M36 0H0V36" stroke="rgba(216,183,122,0.06)" stroke-width="1" />
@@ -97,9 +91,14 @@
     </filter>
     <linearGradient id="sweepGrad" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
       <stop stop-color="#D8B77A" stop-opacity="0" />
-      <stop offset="0.5" stop-color="#D8B77A" stop-opacity="0.9" />
+      <stop offset="0.5" stop-color="#D8B77A" stop-opacity="0.85" />
       <stop offset="1" stop-color="#D8B77A" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="typingClip">
+      <rect x="64" y="194" width="0" height="30">
+        <animate attributeName="width" values="0;0;410;410" keyTimes="0;0.12;0.38;1" dur="6.4s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
   </defs>
 
   <rect width="960" height="320" rx="28" fill="url(#bg)" />
@@ -108,45 +107,43 @@
   <rect x="14" y="14" width="932" height="292" rx="20" stroke="rgba(255,255,255,0.1)" />
   <rect x="34" y="34" width="892" height="252" rx="18" stroke="rgba(216,183,122,0.16)" />
 
-  <circle cx="710" cy="80" r="96" fill="rgba(216,183,122,0.08)" class="halo" filter="url(#softGlow)" />
-  <circle cx="804" cy="98" r="42" fill="rgba(216,183,122,0.08)" class="pulse" />
+  <circle cx="768" cy="96" r="112" fill="rgba(216,183,122,0.07)" class="halo" filter="url(#softGlow)" />
+  <circle cx="840" cy="122" r="34" fill="rgba(216,183,122,0.08)" class="pulse" />
 
-  <text x="66" y="88" fill="#8E98A5" class="ui eyebrow" font-size="11">AI ENGINEER  •  WORKFLOW AUTOMATION SPECIALIST</text>
+  <text x="66" y="88" fill="#8E98A5" class="ui eyebrow" font-size="11">AI ENGINEER  •  AUTOMATION SPECIALIST</text>
   <text x="64" y="148" fill="url(#accent)" class="ui" font-size="54" font-weight="700" letter-spacing="0.4">Rhohart Martel</text>
-  <text x="66" y="184" fill="#E8E2D8" class="ui" font-size="18">Building internal tools, automation systems,</text>
-  <text x="66" y="208" fill="#E8E2D8" class="ui" font-size="18">and AI-assisted reporting products.</text>
-  <text x="66" y="232" fill="#A8B1BE" class="ui" font-size="13.5">Execution-focused and business-facing.</text>
+  <text x="66" y="182" fill="#A8B1BE" class="ui" font-size="13.5">Professional focus</text>
+  <text x="64" y="214" fill="#E8E2D8" class="ui" font-size="22" font-weight="600" clip-path="url(#typingClip)">Internal tools, automation systems, AI reporting</text>
+  <rect x="64" y="194" width="2" height="26" rx="1" fill="#D8B77A">
+    <animate attributeName="x" values="64;64;472;472" keyTimes="0;0.12;0.38;1" dur="6.4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.7;0.85;1" dur="1s" repeatCount="indefinite" />
+  </rect>
 
-  <path d="M60 246H586" stroke="rgba(216,183,122,0.28)" stroke-width="1" />
+  <path d="M60 240H504" stroke="rgba(216,183,122,0.24)" stroke-width="1" />
 
-  <rect x="64" y="255" width="118" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
-  <rect x="194" y="255" width="146" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
-  <rect x="352" y="255" width="132" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
-  <text x="86" y="273" fill="#D7C8B1" class="ui" font-size="12">AI Systems</text>
-  <text x="224" y="273" fill="#D7C8B1" class="ui" font-size="12">Workflow Automation</text>
-  <text x="389" y="273" fill="#D7C8B1" class="ui" font-size="12">Internal Tools</text>
+  <g class="pill-a">
+    <rect x="64" y="256" width="168" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
+    <text x="84" y="274" fill="#D7C8B1" class="ui" font-size="12">30+ workflows shipped</text>
+  </g>
+  <g class="pill-b">
+    <rect x="244" y="256" width="136" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
+    <text x="264" y="274" fill="#D7C8B1" class="ui" font-size="12">50% campaign lift</text>
+  </g>
+  <g class="pill-c">
+    <rect x="392" y="256" width="118" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(216,183,122,0.2)" />
+    <text x="419" y="274" fill="#D7C8B1" class="ui" font-size="12">n8n + AI</text>
+  </g>
 
-  <rect x="614" y="54" width="276" height="214" rx="24" fill="rgba(8,12,18,0.62)" stroke="rgba(216,183,122,0.22)" />
-  <text x="646" y="88" fill="#8E98A5" class="ui eyebrow" font-size="10">IMPACT SNAPSHOT</text>
-  <text x="646" y="122" fill="#F4EFE7" class="ui" font-size="28" font-weight="700">30+ workflows</text>
-  <text x="646" y="144" fill="#A8B1BE" class="ui fade" font-size="13">
-    <tspan x="646" dy="0">Personalized automation systems shipped</tspan>
-    <tspan x="646" dy="16">across operational use cases.</tspan>
-  </text>
-
-  <path d="M646 168H858" stroke="rgba(216,183,122,0.18)" stroke-width="1" />
-
-  <text x="646" y="194" fill="#F4EFE7" class="ui" font-size="28" font-weight="700">50% lift</text>
-  <text x="646" y="216" fill="#A8B1BE" class="ui fade" font-size="13">
-    <tspan x="646" dy="0">Improvement achieved in one deployed</tspan>
-    <tspan x="646" dy="16">QA analytics campaign.</tspan>
-  </text>
-
-  <text x="646" y="246" fill="#D7C8B1" class="ui" font-size="12.5">TypeScript  •  Next.js  •  Node.js</text>
-  <rect x="646" y="256" width="176" height="6" rx="3" fill="rgba(216,183,122,0.12)" />
-  <rect x="646" y="256" width="176" height="6" rx="3" fill="#D8B77A" class="bar-fill" filter="url(#softGlow)" />
+  <path d="M676 90C720 64 792 66 842 106C880 136 892 190 862 236" stroke="rgba(216,183,122,0.22)" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="676" cy="90" r="5" fill="#D8B77A" class="pulse" />
+  <circle cx="746" cy="70" r="4" fill="#D8B77A" opacity="0.72" />
+  <circle cx="842" cy="106" r="4" fill="#D8B77A" opacity="0.72" />
+  <circle cx="888" cy="182" r="4" fill="#D8B77A" opacity="0.72" />
+  <circle cx="862" cy="236" r="5" fill="#D8B77A" class="pulse" />
+  <circle cx="726" cy="208" r="54" fill="rgba(255,255,255,0.02)" stroke="rgba(216,183,122,0.1)" />
+  <circle cx="726" cy="208" r="26" fill="rgba(216,183,122,0.08)" />
 
   <g class="sweep">
-    <rect x="0" y="0" width="200" height="320" fill="url(#sweepGrad)" opacity="0.12" />
+    <rect x="0" y="0" width="200" height="320" fill="url(#sweepGrad)" opacity="0.1" />
   </g>
 </svg>

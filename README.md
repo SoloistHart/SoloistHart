@@ -2,8 +2,6 @@
   <img width="100%" src="./assets/soloist-hart-hero.svg" alt="Soloist Hart professional profile hero" />
 </p>
 
-AI Engineer and workflow automation specialist building internal tools, workflow systems, and AI-assisted reporting products.
-
 <p align="left">
   <a href="mailto:martel.rhohart@gmail.com">Email</a>
   ·
@@ -35,18 +33,6 @@ AI Engineer and workflow automation specialist building internal tools, workflow
     </td>
   </tr>
 </table>
-
-## Impact Snapshot
-
-- Built 30+ personalized n8n automation workflows across client accounts and operational use cases.
-- Helped improve collection rate by 50% in a deployed QA analytics campaign.
-- Built executive and behavioral analytics dashboards using React, Next.js, Node.js, PostgreSQL, and MariaDB.
-
-## Current Focus
-
-- AI dashboards and business-facing internal tools
-- End-to-end n8n workflow automation for operations and content systems
-- AI assistants, prompt workflows, and agent-driven reporting experiences
 
 ## Tech Stack
 
