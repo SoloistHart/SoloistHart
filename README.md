@@ -55,16 +55,9 @@
 
 ## GitHub Stats
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=SoloistHart&show_icons=true&hide_border=true&title_color=D8B77A&icon_color=D8B77A&text_color=CABCA7&bg_color=00000000&rank_icon=github&include_all_commits=true&count_private=true" alt="GitHub stats for SoloistHart" />
-    </td>
-    <td valign="top" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SoloistHart&layout=compact&hide_border=true&title_color=D8B77A&text_color=CABCA7&bg_color=00000000" alt="Top languages for SoloistHart" />
-    </td>
-  </tr>
-</table>
+<p align="left">
+  <img width="100%" src="./github-metrics.svg" alt="GitHub metrics for SoloistHart" />
+</p>
 
 ## Repository Feed
 
