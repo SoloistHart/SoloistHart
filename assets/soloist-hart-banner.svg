@@ -26,7 +26,7 @@
       </feMerge>
     </filter>
     <clipPath id="portraitClip">
-      <rect x="603" y="56" width="292" height="188" rx="18" />
+      <rect x="640" y="56" width="248" height="188" rx="18" />
     </clipPath>
   </defs>
 
@@ -43,40 +43,41 @@
 
   <text x="66" y="98" fill="#8A7356" font-family="'Courier New', monospace" font-size="11" letter-spacing="2.4">RETRO SIGNAL README</text>
   <text x="64" y="146" fill="url(#amber)" font-family="'Courier New', monospace" font-size="46" font-weight="700" letter-spacing="1.2">SOLOIST HART</text>
-  <text x="66" y="173" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="15" letter-spacing="0.4">AI engineer / workflow automation specialist / system-minded builder</text>
+  <text x="66" y="173" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="14.5" letter-spacing="0.25">AI engineer / workflow automation specialist</text>
+  <text x="66" y="194" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13" letter-spacing="0.2">system-minded builder for internal tools and applied AI</text>
 
-  <text x="66" y="210" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; whoami</text>
-  <text x="162" y="210" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">Rhohart Martel</text>
-  <text x="66" y="232" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; build_mode</text>
-  <text x="194" y="232" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">internal tools / dashboards / AI systems / operations</text>
-  <text x="66" y="254" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; status</text>
-  <text x="154" y="254" fill="#F6BD60" font-family="'Courier New', monospace" font-size="13">ONLINE</text>
+  <text x="66" y="224" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; whoami</text>
+  <text x="162" y="224" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">Rhohart Martel</text>
+  <text x="66" y="246" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; build_mode</text>
+  <text x="194" y="246" fill="#F5EDE1" font-family="'Courier New', monospace" font-size="13">dashboards / AI systems / automation</text>
+  <text x="66" y="268" fill="#C6B39A" font-family="'Courier New', monospace" font-size="13">&gt; status</text>
+  <text x="154" y="268" fill="#F6BD60" font-family="'Courier New', monospace" font-size="13">ONLINE</text>
 
-  <rect x="603" y="56" width="292" height="188" rx="18" fill="rgba(7,6,5,0.72)" stroke="rgba(246,189,96,0.24)" />
-  <rect x="603" y="56" width="292" height="188" rx="18" fill="url(#scan)" opacity="0.65" />
-  <text x="625" y="79" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.8">identity.render / ascii portrait</text>
+  <rect x="640" y="56" width="248" height="188" rx="18" fill="rgba(7,6,5,0.72)" stroke="rgba(246,189,96,0.24)" />
+  <rect x="640" y="56" width="248" height="188" rx="18" fill="url(#scan)" opacity="0.65" />
+  <text x="660" y="79" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.8">identity.render / ascii portrait</text>
   <g clip-path="url(#portraitClip)">
-    <text x="620" y="101" fill="#F1C77B" font-family="'Courier New', monospace" font-size="6.4" xml:space="preserve">
-      <tspan x="620" dy="0">                ::::</tspan>
-      <tspan x="620" dy="9">                ;+XX++;;+X$$XXX:</tspan>
-      <tspan x="620" dy="9">                  :;+XXX++;+X$&amp;&amp;&amp;X</tspan>
-      <tspan x="620" dy="9">                    :+X+</tspan>
-      <tspan x="620" dy="9">           :++      ;$X+    :X$&amp;&amp;&amp;&amp;&amp;$</tspan>
-      <tspan x="620" dy="9">              ;     $&amp;&amp;X     +$&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
-      <tspan x="620" dy="9">             :      XX&amp;+       :$$&amp;&amp;&amp;&amp;$</tspan>
-      <tspan x="620" dy="9">                   :$&amp;&amp;:X     +:  :&amp;&amp;&amp;&amp;;</tspan>
-      <tspan x="620" dy="9">                    ;$&amp;&amp;&amp;&amp;X:  +$&amp;&amp;&amp;&amp;&amp;&amp;$X</tspan>
-      <tspan x="620" dy="9">                     +;X&amp;$&amp;&amp;$+X$&amp;&amp;&amp;&amp;$&amp;&amp;;</tspan>
-      <tspan x="620" dy="9">                     +  :&amp;X$X:::;+&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
-      <tspan x="620" dy="9">                  +X+$&amp;X ++;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
-      <tspan x="620" dy="9">                  $X +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;$</tspan>
-      <tspan x="620" dy="9">                    ;;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ ;</tspan>
-      <tspan x="620" dy="9">                         +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
+    <text x="668" y="101" fill="#F1C77B" font-family="'Courier New', monospace" font-size="5.7" xml:space="preserve">
+      <tspan x="668" dy="0">        ::::</tspan>
+      <tspan x="668" dy="9">        ;+XX++;;+X$$XXX:</tspan>
+      <tspan x="668" dy="9">          :;+XXX++;+X$&amp;&amp;&amp;X</tspan>
+      <tspan x="668" dy="9">            :+X+</tspan>
+      <tspan x="668" dy="9">   :++      ;$X+    :X$&amp;&amp;&amp;&amp;&amp;$</tspan>
+      <tspan x="668" dy="9">      ;     $&amp;&amp;X     +$&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
+      <tspan x="668" dy="9">     :      XX&amp;+       :$$&amp;&amp;&amp;&amp;$</tspan>
+      <tspan x="668" dy="9">           :$&amp;&amp;:X     +:  :&amp;&amp;&amp;&amp;;</tspan>
+      <tspan x="668" dy="9">            ;$&amp;&amp;&amp;&amp;X:  +$&amp;&amp;&amp;&amp;&amp;&amp;$X</tspan>
+      <tspan x="668" dy="9">             +;X&amp;$&amp;&amp;$+X$&amp;&amp;&amp;&amp;$&amp;&amp;;</tspan>
+      <tspan x="668" dy="9">             +  :&amp;X$X:::;+&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
+      <tspan x="668" dy="9">          +X+$&amp;X ++;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</tspan>
+      <tspan x="668" dy="9">          $X +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;$</tspan>
+      <tspan x="668" dy="9">            ;;+$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ ;</tspan>
+      <tspan x="668" dy="9">                 +&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+</tspan>
     </text>
   </g>
 
   <path d="M590 32V268" stroke="rgba(246,189,96,0.18)" stroke-width="1" stroke-dasharray="4 8" />
   <path d="M52 188H564" stroke="rgba(246,189,96,0.22)" stroke-width="1" />
   <circle cx="560" cy="188" r="3" fill="#F6BD60" filter="url(#softGlow)" />
-  <text x="620" y="262" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.6">systems with taste / shipped work over noise</text>
+  <text x="640" y="262" fill="#8A7356" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.2">systems with taste / shipped work over noise</text>
 </svg>
