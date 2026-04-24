@@ -1,5 +1,5 @@
 <p align="left">
-  <img width="100%" src="./assets/soloist-hart-banner.svg" alt="Soloist Hart" />
+  <img width="100%" src="./assets/soloist-hart-hero.svg" alt="Soloist Hart animated retro signal hero" />
 </p>
 
 ```text
