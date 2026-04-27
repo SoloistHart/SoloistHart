@@ -67,9 +67,9 @@
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
 | ---------- | ----------- | ---------------- | ----- | ------------ |
-| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">8 days ago</span> |
-| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">6 days ago</span> |
-| [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">12 days ago</span> |
+| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">12 days ago</span> |
+| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">10 days ago</span> |
+| [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">16 days ago</span> |
 <!-- featured-projects:end -->
 
 </details>
