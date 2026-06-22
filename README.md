@@ -67,10 +67,11 @@
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
 | ---------- | ----------- | ---------------- | ----- | ------------ |
-| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">61 days ago</span> |
-| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">59 days ago</span> |
-| [hopecore-caption-renderer](https://github.com/SoloistHart/hopecore-caption-renderer) | No description provided. | JavaScript | 0 | <span title="2026-05-10">36 days ago</span> |
-| [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">65 days ago</span> |
+| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">6 days ago</span> |
+| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">68 days ago</span> |
+| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">66 days ago</span> |
+| [hopecore-caption-renderer](https://github.com/SoloistHart/hopecore-caption-renderer) | No description provided. | JavaScript | 0 | <span title="2026-05-10">43 days ago</span> |
+| [vibe-a-sheesh](https://github.com/SoloistHart/vibe-a-sheesh) | No description provided. | Python | 0 | <span title="2026-04-11">72 days ago</span> |
 <!-- featured-projects:end -->
 
 </details>
