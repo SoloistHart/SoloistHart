@@ -67,12 +67,12 @@
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
 | ---------- | ----------- | ---------------- | ----- | ------------ |
-| [Token-pls](https://github.com/SoloistHart/Token-pls) | asdasd | N/A | 0 | <span title="2026-06-26">16 days ago</span> |
-| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">27 days ago</span> |
-| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">89 days ago</span> |
-| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">87 days ago</span> |
-| [Hart-Portfolio-v3](https://github.com/SoloistHart/Hart-Portfolio-v3) | No description provided. | TypeScript | 0 | <span title="2026-06-29">14 days ago</span> |
-| [hopecore-caption-renderer](https://github.com/SoloistHart/hopecore-caption-renderer) | No description provided. | JavaScript | 0 | <span title="2026-05-10">64 days ago</span> |
+| [Token-pls](https://github.com/SoloistHart/Token-pls) | asdasd | N/A | 0 | <span title="2026-06-26">23 days ago</span> |
+| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">34 days ago</span> |
+| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">96 days ago</span> |
+| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">94 days ago</span> |
+| [Hart-Portfolio-v3](https://github.com/SoloistHart/Hart-Portfolio-v3) | No description provided. | TypeScript | 0 | <span title="2026-06-29">21 days ago</span> |
+| [hopecore-caption-renderer](https://github.com/SoloistHart/hopecore-caption-renderer) | No description provided. | JavaScript | 0 | <span title="2026-05-10">71 days ago</span> |
 <!-- featured-projects:end -->
 
 </details>
