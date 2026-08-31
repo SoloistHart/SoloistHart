@@ -67,12 +67,12 @@
 <!-- featured-projects:start -->
 | Repository | Description | Primary Language | Stars | Last Updated |
 | ---------- | ----------- | ---------------- | ----- | ------------ |
-| [Token-pls](https://github.com/SoloistHart/Token-pls) | asdasd | N/A | 0 | <span title="2026-06-26">58 days ago</span> |
-| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">69 days ago</span> |
-| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">131 days ago</span> |
-| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">129 days ago</span> |
-| [offline-games](https://github.com/SoloistHart/offline-games) | No description provided. | N/A | 0 | <span title="2026-07-27">28 days ago</span> |
-| [Rydar](https://github.com/SoloistHart/Rydar) | No description provided. | JavaScript | 0 | <span title="2026-07-25">29 days ago</span> |
+| [Token-pls](https://github.com/SoloistHart/Token-pls) | asdasd | N/A | 0 | <span title="2026-06-26">65 days ago</span> |
+| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">76 days ago</span> |
+| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">138 days ago</span> |
+| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">136 days ago</span> |
+| [offline-games](https://github.com/SoloistHart/offline-games) | No description provided. | N/A | 0 | <span title="2026-07-27">35 days ago</span> |
+| [Rydar](https://github.com/SoloistHart/Rydar) | No description provided. | JavaScript | 0 | <span title="2026-07-25">36 days ago</span> |
 <!-- featured-projects:end -->
 
 </details>
