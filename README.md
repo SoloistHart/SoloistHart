@@ -8,71 +8,53 @@
   <a href="https://www.linkedin.com/in/rhohart-martel-4798ab307">LinkedIn</a>
   ·
   <a href="https://portfolio-hart.vercel.app">Portfolio</a>
-  ·
-  <a href="https://github.com/SoloistHart?tab=repositories">All repositories</a>
 </p>
 
-## Selected Systems
+I build AI systems that operations teams actually run. LLM pipelines, QA scoring, coaching insights, and the internal apps around them. Most of that work lives in private product repos.
+
+## Selected systems
 
 <table align="center">
   <tr>
     <td valign="top" width="33%">
-      <strong><a href="https://github.com/SoloistHart/Portfolio-Hart">Portfolio-Hart</a></strong><br/>
-      Premium portfolio foundation built with a calm editorial visual system and motion-aware frontend architecture.<br/><br/>
-      <code>Next.js</code> <code>TypeScript</code> <code>Tailwind</code>
+      <strong>Phoenix ST</strong><br/>
+      QA platform for call and conversation review. FastAPI + Next.js on top of a Streamlit suite, with OpenAI and Gemini in the processing path, Lark handoff, and Docker for internal deploys. Built with Texxen. Private.<br/><br/>
+      <code>Python</code> <code>FastAPI</code> <code>Next.js</code> <code>OpenAI</code> <code>Gemini</code>
     </td>
     <td valign="top" width="33%">
-      <strong>QA AI Behavioral Dashboard</strong><br/>
-      AI-assisted QA system with KPI drilldowns, filtered exports, coaching insights, and PII-aware workflows for operations teams.<br/><br/>
+      <strong>QA AI behavioral dashboard</strong><br/>
+      AI-assisted QA for ops teams: KPI drilldowns, filtered exports, coaching insights, and PII-aware workflows on Postgres. Private.<br/><br/>
       <code>React</code> <code>Node.js</code> <code>PostgreSQL</code>
     </td>
     <td valign="top" width="33%">
-      <strong>Executive Productivity Dashboard</strong><br/>
-      Executive-facing reporting product for audit trends, breakdowns, productivity tracking, and business-facing performance views.<br/><br/>
+      <strong>Executive productivity dashboard</strong><br/>
+      Reporting for audit trends, breakdowns, and business-facing performance views. Private.<br/><br/>
       <code>Next.js</code> <code>Node.js</code> <code>MariaDB</code>
     </td>
   </tr>
 </table>
 
-## Tech Stack
+## Tech stack
 
 <table>
+  <tr>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/python/D8B77A" width="34" height="34" alt="Python" /><br/><sub>Python</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/fastapi/D8B77A" width="34" height="34" alt="FastAPI" /><br/><sub>FastAPI</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/openai/D8B77A" width="34" height="34" alt="OpenAI" /><br/><sub>OpenAI</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/googlegemini/D8B77A" width="34" height="34" alt="Gemini" /><br/><sub>Gemini</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/postgresql/D8B77A" width="34" height="34" alt="PostgreSQL" /><br/><sub>PostgreSQL</sub></td>
+  </tr>
   <tr>
     <td align="center" width="20%"><img src="https://cdn.simpleicons.org/typescript/D8B77A" width="34" height="34" alt="TypeScript" /><br/><sub>TypeScript</sub></td>
     <td align="center" width="20%"><img src="https://cdn.simpleicons.org/react/D8B77A" width="34" height="34" alt="React" /><br/><sub>React</sub></td>
     <td align="center" width="20%"><img src="https://cdn.simpleicons.org/nextdotjs/D8B77A" width="34" height="34" alt="Next.js" /><br/><sub>Next.js</sub></td>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/nodedotjs/D8B77A" width="34" height="34" alt="Node.js" /><br/><sub>Node.js</sub></td>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/postgresql/D8B77A" width="34" height="34" alt="PostgreSQL" /><br/><sub>PostgreSQL</sub></td>
-  </tr>
-  <tr>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/mysql/D8B77A" width="34" height="34" alt="MySQL" /><br/><sub>MySQL</sub></td>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/n8n/D8B77A" width="34" height="34" alt="n8n" /><br/><sub>n8n</sub></td>
     <td align="center" width="20%"><img src="https://cdn.simpleicons.org/docker/D8B77A" width="34" height="34" alt="Docker" /><br/><sub>Docker</sub></td>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/tailwindcss/D8B77A" width="34" height="34" alt="Tailwind CSS" /><br/><sub>Tailwind CSS</sub></td>
-    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/github/D8B77A" width="34" height="34" alt="GitHub" /><br/><sub>GitHub</sub></td>
+    <td align="center" width="20%"><img src="https://cdn.simpleicons.org/n8n/D8B77A" width="34" height="34" alt="n8n" /><br/><sub>n8n</sub></td>
   </tr>
 </table>
 
-## GitHub Stats
+## GitHub stats
 
 <p align="left">
   <img width="100%" src="./github-metrics.svg" alt="GitHub metrics for SoloistHart" />
 </p>
-
-## Repository Feed
-
-<details>
-  <summary>Open generated featured repositories</summary>
-
-<!-- featured-projects:start -->
-| Repository | Description | Primary Language | Stars | Last Updated |
-| ---------- | ----------- | ---------------- | ----- | ------------ |
-| [Token-pls](https://github.com/SoloistHart/Token-pls) | asdasd | N/A | 0 | <span title="2026-06-26">65 days ago</span> |
-| [Hart-Portfolio-v2](https://github.com/SoloistHart/Hart-Portfolio-v2) | Portfolio that is focused on UI animations for the landing page | N/A | 0 | <span title="2026-06-16">76 days ago</span> |
-| [Portfolio-Hart](https://github.com/SoloistHart/Portfolio-Hart) | Premium portfolio foundation built with Next.js, TypeScript, and a motion-aware visual system. | TypeScript | 0 | <span title="2026-04-15">138 days ago</span> |
-| [hol-copilot-lab](https://github.com/SoloistHart/hol-copilot-lab) | Github Copilot: Dev Days laboratory | TypeScript | 0 | <span title="2026-04-17">136 days ago</span> |
-| [offline-games](https://github.com/SoloistHart/offline-games) | No description provided. | N/A | 0 | <span title="2026-07-27">35 days ago</span> |
-| [Rydar](https://github.com/SoloistHart/Rydar) | No description provided. | JavaScript | 0 | <span title="2026-07-25">36 days ago</span> |
-<!-- featured-projects:end -->
-
-</details>
