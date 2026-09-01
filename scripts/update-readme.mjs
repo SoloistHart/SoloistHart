@@ -98,7 +98,8 @@ function replaceFeaturedProjects(readme, table) {
   const end = readme.indexOf(endMarker);
 
   if (start === -1 || end === -1 || end < start) {
-    throw new Error("Featured project markers are missing from README.md.");
+    console.log("Featured project markers are missing from README.md. Leaving README unchanged.");
+    return readme;
   }
 
   return `${readme.slice(0, start + startMarker.length)}\n${table}\n${readme.slice(end)}`;
