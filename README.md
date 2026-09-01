@@ -10,26 +10,26 @@
   <a href="https://portfolio-hart.vercel.app">Portfolio</a>
 </p>
 
-I build AI systems that operations teams actually run. LLM pipelines, QA scoring, coaching insights, and the internal apps around them. Most of that work lives in private product repos.
+I build AI systems for operations teams. Most of that work lives in private product repos.
 
 ## Selected systems
 
 <table align="center">
   <tr>
     <td valign="top" width="33%">
-      <strong>Phoenix ST</strong><br/>
-      QA platform for call and conversation review. FastAPI + Next.js on top of a Streamlit suite, with OpenAI and Gemini in the processing path, Lark handoff, and Docker for internal deploys. Built with Texxen. Private.<br/><br/>
-      <code>Python</code> <code>FastAPI</code> <code>Next.js</code> <code>OpenAI</code> <code>Gemini</code>
+      <strong>AI QA platform</strong><br/>
+      Internal tooling that helps review conversations, score quality, and surface coaching notes.<br/><br/>
+      <code>Python</code> <code>TypeScript</code>
     </td>
     <td valign="top" width="33%">
-      <strong>QA AI behavioral dashboard</strong><br/>
-      AI-assisted QA for ops teams: KPI drilldowns, filtered exports, coaching insights, and PII-aware workflows on Postgres. Private.<br/><br/>
-      <code>React</code> <code>Node.js</code> <code>PostgreSQL</code>
+      <strong>QA analytics</strong><br/>
+      Dashboards for QA metrics, filters, and exports used by operations teams.<br/><br/>
+      <code>React</code> <code>Node.js</code>
     </td>
     <td valign="top" width="33%">
-      <strong>Executive productivity dashboard</strong><br/>
-      Reporting for audit trends, breakdowns, and business-facing performance views. Private.<br/><br/>
-      <code>Next.js</code> <code>Node.js</code> <code>MariaDB</code>
+      <strong>Executive reporting</strong><br/>
+      High-level views of audit trends and team productivity.<br/><br/>
+      <code>Next.js</code> <code>SQL</code>
     </td>
   </tr>
 </table>
